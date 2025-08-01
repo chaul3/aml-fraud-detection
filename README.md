@@ -52,32 +52,7 @@ We use a custom-generated synthetic dataset designed specifically for AML fraud 
 - **Educational Value**: Clear understanding of feature engineering and fraud patterns
 - **Balanced Distribution**: 10,000 transactions with ~1.7% fraud rate, ideal for learning
 
-## Analysis of AML Cases
 
-### Key Fraud Patterns Identified
-
-Our analysis reveals several critical patterns that distinguish fraudulent from legitimate transactions:
-
-#### 1. Transaction Amount Patterns
-- **Fraudulent transactions average 2.1x higher amounts** than normal transactions
-- High-value transactions (>75th percentile) show 3x higher fraud probability
-- Fraud amounts cluster around specific ranges, suggesting coordinated activities
-
-#### 2. Risk Score Indicators
-- **Combined risk scores**: Fraudulent transactions average 15-20 points higher
-- Transactions with risk scores >70 have 85% fraud probability
-- Multi-factor risk assessment proves most effective for detection
-
-#### 3. Behavioral Anomalies
-- **Cross-border transactions**: 4.2x higher fraud rate than domestic
-- **Cash transaction ratios**: Fraudulent accounts show 3.1x higher cash usage
-- **Time patterns**: Peak fraud activity during off-hours (2-6 AM)
-- **Velocity patterns**: Rapid transaction sequences indicate coordinated fraud
-
-#### 4. Customer Behavior Analysis
-- **High-risk customers**: Some customers show 80%+ fraud rates across transactions
-- **Account takeover patterns**: Sudden behavioral changes preceding fraud spikes
-- **Network effects**: Fraudulent customers often cluster in transaction networks
 
 ### Dynamic Threshold Effectiveness
 
@@ -125,42 +100,54 @@ Our comprehensive analysis generates detailed visualizations to illustrate fraud
 
 ### 📊 Data Analysis Visualizations
 
-**Fraud Distribution Analysis** (`reports/figures/fraud_distribution_analysis.png`)
-- Transaction amount distributions comparing fraud vs normal transactions
-- Risk score patterns and their relationship to fraud occurrence
-- Temporal fraud patterns showing peak activity hours
-- Cross-border transaction analysis revealing higher fraud rates
+**Fraud Distribution Analysis** 
+<img src="[https://github.com/chaul3/rof-resnet18-cancer-dataset/blob/main/rof_curve_penultimate_layer.png](https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/anomaly_detection_results.png)" align= " right">
 
-**Correlation and Feature Analysis** (`reports/figures/correlation_matrix.png`, `reports/figures/feature_importance.png`)
+Transaction Amount Patterns
+- **Fraudulent transactions average 2.1x higher amounts** than normal transactions
+- High-value transactions (>75th percentile) show 3x higher fraud probability
+- Fraud amounts cluster around specific ranges, suggesting coordinated activities
+
+**Correlation and Feature Analysis** 
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/feature_importance.png" align= " right">
 - Feature correlation heatmap identifying relationships between variables
 - Feature importance ranking showing cross-border transactions as top fraud indicator
 - Risk score combinations and their predictive power
 
 ### 🎯 Machine Learning Model Results
 
-**Anomaly Detection Performance** (`reports/figures/anomaly_detection_results.png`)
+**Anomaly Detection Performance** 
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/anomaly_detection_results.png" align= " right">
 - Isolation Forest, One-Class SVM, and Local Outlier Factor score distributions
 - Model comparison showing LOF achieving highest precision (10.0%)
 - Anomaly score visualizations for outlier identification
 
-**Clustering Analysis** (`reports/figures/clustering_analysis.png`)
+**Clustering Analysis** 
+
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/clustering_analysis.png" align= " right">
 - K-Means clustering with 5 clusters showing varied fraud rates (0-3.15%)
 - DBSCAN analysis identifying noise points with concentrated fraud patterns
 - PCA visualization revealing transaction pattern separability
 
-**Supervised Learning Excellence** (`reports/figures/supervised_learning_results.png`)
+**Supervised Learning Excellence** 
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/supervised_learning_results.png" align= " right">
+
 - ROC curves showing exceptional performance: Random Forest (AUC: 0.998), XGBoost (AUC: 0.999)
 - Feature importance analysis confirming cross-border transactions as primary indicator
 - Confusion matrices demonstrating high precision and recall rates
 
 ### 🎚️ Dynamic Threshold Effectiveness
 
-**Threshold Analysis** (`reports/figures/dynamic_thresholds_distribution.png`)
+**Threshold Analysis** 
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/dynamic_thresholds_distribution.png" align= " right">
+
 - Personalized threshold distributions for amount, frequency, and risk scores
 - Customer-specific baseline establishment for adaptive monitoring
 - Cross-border and behavioral threshold calibration
 
-**Comprehensive Model Evaluation** (`reports/figures/comprehensive_model_evaluation.png`)
+**Comprehensive Model Evaluation** 
+<img src="https://github.com/chaul3/aml-fraud-detection/blob/main/reports/figures/comprehensive_model_evaluation.png" align= " right">
+(`reports/figures/comprehensive_model_evaluation.png`)
 - Side-by-side performance comparison across all model types
 - Temporal fraud patterns showing evening peak activity (21:00)
 - Risk score distribution analysis revealing clear fraud/normal separation
@@ -175,6 +162,21 @@ Our comprehensive analysis generates detailed visualizations to illustrate fraud
 | Local Outlier Factor | Anomaly Detection | 10.0% | 12.1% | 11.0% | - |
 | One-Class SVM | Anomaly Detection | 7.7% | 10.3% | 8.8% | - |
 | Isolation Forest | Anomaly Detection | 7.0% | 8.5% | 7.7% | - |
+#### Risk Score Indicators
+- **Combined risk scores**: Fraudulent transactions average 15-20 points higher
+- Transactions with risk scores >70 have 85% fraud probability
+- Multi-factor risk assessment proves most effective for detection
+
+#### Behavioral Anomalies
+- **Cross-border transactions**: 4.2x higher fraud rate than domestic
+- **Cash transaction ratios**: Fraudulent accounts show 3.1x higher cash usage
+- **Time patterns**: Peak fraud activity during off-hours (2-6 AM)
+- **Velocity patterns**: Rapid transaction sequences indicate coordinated fraud
+
+#### Customer Behavior Analysis
+- **High-risk customers**: Some customers show 80%+ fraud rates across transactions
+- **Account takeover patterns**: Sudden behavioral changes preceding fraud spikes
+- **Network effects**: Fraudulent customers often cluster in transaction networks
 
 ## Installation
 
@@ -183,27 +185,3 @@ git clone https://github.com/chaul3/aml-fraud-detection.git
 cd aml-fraud-detection
 pip install -r requirements.txt
 ```
-
-## Configuration
-
-Edit `config/config.yaml` to customize:
-- Model parameters
-- Detection thresholds
-- Feature engineering settings
-- Evaluation metrics
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For questions or collaboration opportunities, please open an issue on GitHub.
