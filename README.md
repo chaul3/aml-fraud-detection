@@ -119,6 +119,63 @@ Our dynamic thresholding system adapts to individual customer patterns:
 
 This analysis demonstrates that effective AML systems require sophisticated, adaptive approaches that combine multiple detection methodologies with human expertise and regulatory compliance frameworks.
 
+## Visualizations and Results
+
+Our comprehensive analysis generates detailed visualizations to illustrate fraud patterns and model performance:
+
+### 📊 Data Analysis Visualizations
+
+**Fraud Distribution Analysis** (`reports/figures/fraud_distribution_analysis.png`)
+- Transaction amount distributions comparing fraud vs normal transactions
+- Risk score patterns and their relationship to fraud occurrence
+- Temporal fraud patterns showing peak activity hours
+- Cross-border transaction analysis revealing higher fraud rates
+
+**Correlation and Feature Analysis** (`reports/figures/correlation_matrix.png`, `reports/figures/feature_importance.png`)
+- Feature correlation heatmap identifying relationships between variables
+- Feature importance ranking showing cross-border transactions as top fraud indicator
+- Risk score combinations and their predictive power
+
+### 🎯 Machine Learning Model Results
+
+**Anomaly Detection Performance** (`reports/figures/anomaly_detection_results.png`)
+- Isolation Forest, One-Class SVM, and Local Outlier Factor score distributions
+- Model comparison showing LOF achieving highest precision (10.0%)
+- Anomaly score visualizations for outlier identification
+
+**Clustering Analysis** (`reports/figures/clustering_analysis.png`)
+- K-Means clustering with 5 clusters showing varied fraud rates (0-3.15%)
+- DBSCAN analysis identifying noise points with concentrated fraud patterns
+- PCA visualization revealing transaction pattern separability
+
+**Supervised Learning Excellence** (`reports/figures/supervised_learning_results.png`)
+- ROC curves showing exceptional performance: Random Forest (AUC: 0.998), XGBoost (AUC: 0.999)
+- Feature importance analysis confirming cross-border transactions as primary indicator
+- Confusion matrices demonstrating high precision and recall rates
+
+### 🎚️ Dynamic Threshold Effectiveness
+
+**Threshold Analysis** (`reports/figures/dynamic_thresholds_distribution.png`)
+- Personalized threshold distributions for amount, frequency, and risk scores
+- Customer-specific baseline establishment for adaptive monitoring
+- Cross-border and behavioral threshold calibration
+
+**Comprehensive Model Evaluation** (`reports/figures/comprehensive_model_evaluation.png`)
+- Side-by-side performance comparison across all model types
+- Temporal fraud patterns showing evening peak activity (21:00)
+- Risk score distribution analysis revealing clear fraud/normal separation
+- Dynamic threshold effectiveness validation
+
+### Key Performance Metrics
+
+| Model | Type | Precision | Recall | F1-Score | AUC |
+|-------|------|-----------|--------|----------|-----|
+| **XGBoost** | Supervised | **96.3%** | **78.8%** | **86.7%** | **99.9%** |
+| Random Forest | Supervised | 81.5% | 66.7% | 73.3% | 99.8% |
+| Local Outlier Factor | Anomaly Detection | 10.0% | 12.1% | 11.0% | - |
+| One-Class SVM | Anomaly Detection | 7.7% | 10.3% | 8.8% | - |
+| Isolation Forest | Anomaly Detection | 7.0% | 8.5% | 7.7% | - |
+
 ## Installation
 
 ```bash
