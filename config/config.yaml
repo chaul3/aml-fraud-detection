@@ -1,0 +1,168 @@
+# Project Configuration
+project:
+  name: "AML Fraud Detection"
+  version: "1.0.0"
+  description: "Anti-Money Laundering fraud detection with dynamic thresholds"
+
+# Data Configuration
+data:
+  sample_size: 10000
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  
+  # Feature engineering
+  feature_selection:
+    method: "mutual_info"  # Options: mutual_info, chi2, f_classif, rfe
+    k_best: 50
+  
+  # Preprocessing
+  scaling:
+    method: "standard"  # Options: standard, minmax, robust
+  
+  # Imbalanced data handling
+  resampling:
+    method: "smote"  # Options: smote, adasyn, random_oversample, random_undersample
+    ratio: "auto"
+
+# Model Configuration
+models:
+  # Anomaly Detection Models
+  anomaly_detection:
+    isolation_forest:
+      contamination: 0.1
+      n_estimators: 100
+      random_state: 42
+    
+    one_class_svm:
+      nu: 0.1
+      kernel: "rbf"
+      gamma: "scale"
+    
+    local_outlier_factor:
+      n_neighbors: 20
+      contamination: 0.1
+    
+    autoencoder:
+      encoding_dim: 32
+      epochs: 100
+      batch_size: 256
+      learning_rate: 0.001
+
+  # Clustering Models
+  clustering:
+    kmeans:
+      n_clusters: 8
+      random_state: 42
+      n_init: 10
+    
+    dbscan:
+      eps: 0.5
+      min_samples: 5
+    
+    gaussian_mixture:
+      n_components: 5
+      random_state: 42
+
+  # Supervised Learning Models
+  supervised:
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+      class_weight: "balanced"
+    
+    xgboost:
+      n_estimators: 100
+      max_depth: 6
+      learning_rate: 0.1
+      random_state: 42
+      scale_pos_weight: 10
+    
+    logistic_regression:
+      random_state: 42
+      class_weight: "balanced"
+      max_iter: 1000
+    
+    neural_network:
+      hidden_layers: [128, 64, 32]
+      dropout_rate: 0.3
+      epochs: 50
+      batch_size: 256
+      learning_rate: 0.001
+
+# Dynamic Thresholds Configuration
+dynamic_thresholds:
+  window_size: 30  # days
+  update_frequency: "daily"  # Options: hourly, daily, weekly
+  
+  # Threshold methods
+  methods:
+    moving_average:
+      window: 7
+      std_multiplier: 2
+    
+    statistical_process_control:
+      control_limits: 3  # sigma
+      sample_size: 100
+    
+    adaptive:
+      learning_rate: 0.01
+      decay: 0.95
+
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+    - "pr_auc"
+    - "false_positive_rate"
+  
+  cross_validation:
+    cv_folds: 5
+    stratify: true
+  
+  # Alert thresholds
+  alerts:
+    high_risk_threshold: 0.8
+    medium_risk_threshold: 0.5
+    low_risk_threshold: 0.2
+
+# Monitoring Configuration
+monitoring:
+  drift_detection:
+    method: "ks_test"  # Options: ks_test, psi, wasserstein
+    threshold: 0.05
+  
+  performance_degradation:
+    threshold: 0.05  # 5% decrease in performance
+    window: 7  # days
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/aml_fraud_detection.log"
+
+# Database Configuration
+database:
+  type: "postgresql"  # Options: postgresql, mysql, sqlite
+  host: "localhost"
+  port: 5432
+  name: "aml_fraud_db"
+  # Note: Use environment variables for sensitive data
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  
+# Visualization Configuration
+visualization:
+  default_theme: "plotly_white"
+  color_palette: "viridis"
+  figure_size: [12, 8]
+  dpi: 300
