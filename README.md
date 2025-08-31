@@ -185,3 +185,11 @@ git clone https://github.com/chaul3/aml-fraud-detection.git
 cd aml-fraud-detection
 pip install -r requirements.txt
 ```
+
+## Configuration
+
+Edit `config/config.yaml` to customize:
+- Model parameters
+- Detection thresholds
+- Feature engineering settings
+- Evaluation metrics
