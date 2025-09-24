@@ -2,7 +2,7 @@
 project:
   name: "AML Fraud Detection"
   version: "1.0.0"
-  description: "Anti-Money Laundering fraud detection with thresholds"
+  description: "Anti-Money Laundering Fraud detection with thresholds"
 
 # Data Configuration
 data:
