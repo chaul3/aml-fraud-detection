@@ -13,7 +13,7 @@
 - **Labels**: Binary fraud classification (0/1)
 - **Fraud Rate**: ~3.5%
 - **Download**: `https://www.kaggle.com/c/ieee-fraud-detection/data`
-- **Why it's good**: Real-world data, rich feature set, good for anomaly detection
+- **Highlights**: Real-world data, rich feature set, good for anomaly detection
 
 ### 2. **Credit Card Fraud Detection Dataset** (Alternative)
 - **Source**: Kaggle / ULB Machine Learning Group
@@ -22,7 +22,7 @@
 - **Labels**: Binary fraud classification
 - **Fraud Rate**: 0.172%
 - **Download**: `https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud`
-- **Why it's good**: Highly imbalanced, good for outlier detection algorithms
+- **Highlights**: Highly imbalanced, good for outlier detection algorithms
 
 ### 3. **PaySim Financial Dataset** (Backup)
 - **Source**: Synthetic but realistic
@@ -30,14 +30,14 @@
 - **Features**: Transaction type, amount, origin/destination accounts, balances
 - **Labels**: Fraud labels available
 - **Download**: `https://www.kaggle.com/datasets/ealaxi/paysim1`
-- **Why it's good**: Includes money laundering patterns, large dataset
+- **Highlights**: Includes money laundering patterns, large dataset
 
 ### 4. **Synthetic AML Dataset** (Generated in this project)
 - **Source**: Our custom generator (see notebook)
 - **Size**: 10,000 transactions (configurable)
 - **Features**: 20+ AML-specific features
 - **Labels**: Fraud classification with realistic patterns
-- **Why it's good**: Tailored for AML detection, includes behavioral patterns
+- **Highlights**: Tailored for AML detection, includes behavioral patterns
 
 ## Project Structure Created
 
