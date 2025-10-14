@@ -1,8 +1,4 @@
 # 🎉 AML Fraud Detection Project Successfully Published!
-
-## 📍 Repository URL
-**https://github.com/chaul3/aml-fraud-detection**
-
 ## 🚀 Project Summary
 
 Your comprehensive AML (Anti-Money Laundering) fraud detection system has been successfully published to GitHub! Here's what was included:
