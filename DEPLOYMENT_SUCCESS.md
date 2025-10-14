@@ -164,32 +164,6 @@ Your project includes:
 - ✅ **Industry Standards**: MIT License, proper Git structure
 - ✅ **Scalable Design**: Ready for real-world deployment
 
-### 🎯 **Next Steps**
 
-1. **⭐ Star the Repository**: Show your support for the project
-2. **🔄 Clone and Experiment**: Try it with different parameters
-3. **📊 Add Real Data**: Integrate with IEEE-CIS or other datasets
-4. **🚀 Deploy**: Use in production AML systems
-5. **🤝 Contribute**: Submit improvements and new features
-
-### 🏆 **Achievement Unlocked**
-
-✅ **Complete AML System**: Dynamic thresholds + ML algorithms  
-✅ **Production Ready**: Modular, configurable, documented  
-✅ **GitHub Published**: Professional repository structure  
-✅ **Industry Standard**: Follows AML best practices  
-✅ **Extensible**: Ready for customization and scaling  
-
----
-
-## 🎊 **Congratulations!**
-
-You now have a professional-grade AML fraud detection system published on GitHub, featuring:
-- **Dynamic thresholds** based on historical user data
-- **Multiple ML algorithms** for comprehensive detection
-- **Real-world applicable** architecture and features
-- **Fully documented** and ready for collaboration
-
-**Repository**: https://github.com/chaul3/aml-fraud-detection
 
 Happy fraud detecting! 🔍💰🛡️
